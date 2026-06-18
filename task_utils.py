@@ -1,4 +1,4 @@
-from .validation import validate_task_title, validate_task_description, validate_due_date
+from validation import validate_task_title, validate_task_description, validate_due_date
 
 
 def add_task(tasks, title, description, due_date):

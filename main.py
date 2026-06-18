@@ -34,14 +34,14 @@ while True:
         except ValueError as e:
             print(e)
 
-    elif choice == "2":
+   elif choice == "2":
 
-        title = input(
-            "Enter task title to complete: "
-        )
+    task_number = input(
+        "Enter task number to complete: "
+    )
 
-        mark_task_as_complete(tasks, title)
-
+    mark_task_as_complete(tasks, task_number)
+    
     elif choice == "3":
 
         view_pending_tasks(tasks)

@@ -11,6 +11,9 @@ def validate_task_description(description):
 
 
 def validate_due_date(due_date):
+    if len(due_date.strip()) == 0:
+        raise ValueError("Due date cannot be empty.")
+
     parts = due_date.split("-")
 
     if len(parts) != 3:

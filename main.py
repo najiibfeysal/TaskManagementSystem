@@ -1,4 +1,4 @@
-from task_manager.task_utils import (
+from task_utils import (
     add_task,
     mark_task_as_complete,
     view_pending_tasks,
@@ -31,20 +31,27 @@ while True:
                 description,
                 due_date
             )
+
         except ValueError as e:
             print(e)
 
-   elif choice == "2":
 
-    task_number = input(
-        "Enter task number to complete: "
-    )
+    elif choice == "2":
 
-    mark_task_as_complete(tasks, task_number)
-    
+        task_number = input(
+            "Enter task number to complete: "
+        )
+
+        mark_task_as_complete(
+            tasks,
+            task_number
+        )
+
+
     elif choice == "3":
 
         view_pending_tasks(tasks)
+
 
     elif choice == "4":
 
@@ -54,10 +61,13 @@ while True:
             f"Progress: {progress:.2f}% complete"
         )
 
+
     elif choice == "5":
 
         print("Goodbye!")
         break
 
+
     else:
+
         print("Invalid option.")
